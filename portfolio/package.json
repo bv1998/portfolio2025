@@ -7,10 +7,10 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "tw:init": "tailwindcss init -p"
+        "tw:init": "tailwindcss init -p",
+        "tw:dev": "tailwindcss -i ./src/style.css -o ./dist/output.css --watch"
     },
     "dependencies": {
-        "@tailwindcss/cli": "^4.1.11",
         "vue": "^3.5.17",
         "vue-router": "^4.5.1"
     },
@@ -18,7 +18,8 @@
         "@vitejs/plugin-vue": "^6.0.0",
         "autoprefixer": "^10.4.21",
         "postcss": "^8.5.6",
-        "tailwindcss": "^4.1.11",
+        "sass": "^1.89.2",
+        "tailwindcss": "^3.4.17",
         "vite": "^7.0.4"
     }
 }

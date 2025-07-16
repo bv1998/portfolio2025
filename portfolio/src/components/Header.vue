@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import Button from "./Button.vue";
+</script>
 
 <template>
     <div id="main-header">
@@ -9,7 +11,18 @@
                 </router-link>
             </div>
             <div class="nav"></div>
-            <div class="btn-row flex flex-row gap-6"></div>
+            <div class="btn-row flex flex-row gap-14">
+                <Button
+                    buttonLink="/"
+                    buttonText="Download CV"
+                    buttonStyle="main"
+                />
+                <Button
+                    buttonLink="/"
+                    buttonText="Contact Bryan"
+                    buttonStyle="main"
+                />
+            </div>
         </div>
     </div>
 </template>
