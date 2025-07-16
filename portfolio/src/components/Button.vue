@@ -11,7 +11,7 @@ const props = defineProps({
     buttonStyle: {
         type: String,
         default: "main",
-        validator: (value) => ["main", "third"].includes(value),
+        validator: (value) => ["main", "light"].includes(value),
     },
 });
 </script>
@@ -34,24 +34,28 @@ const props = defineProps({
         padding-left: 21px;
         // font-size: 24px;
     }
-    &.btn--main {
-        color: $dark;
-        position: relative;
-        line-height: 1;
+    color: $dark;
+    position: relative;
+    line-height: 1;
+    &::after {
+        content: "";
+        width: 40%;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background: $dark;
+        position: absolute;
+        transition: all 0.4s ease;
+    }
+    &:hover {
         &::after {
-            content: "";
-            width: 40%;
-            height: 3px;
-            bottom: 0;
-            left: 0;
-            background: $dark;
-            position: absolute;
-            transition: all 0.4s ease;
+            width: 100%;
         }
-        &:hover {
-            &::after {
-                width: 100%;
-            }
+    }
+    &.btn--light {
+        color: $light;
+        &::after {
+            background: $light;
         }
     }
 }

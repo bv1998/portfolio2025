@@ -1,6 +1,7 @@
 <script setup>
 // import HelloWorld from './components/HelloWorld.vue'
 import Header from "../src/components/Header.vue";
+import Footer from "../src/components/Footer.vue";
 import Languages from "../src/components/Laguages.vue";
 import ProjectCard from "../src/components/ProjectCard.vue";
 </script>
@@ -84,7 +85,7 @@ import ProjectCard from "../src/components/ProjectCard.vue";
                         projectType="Custom Website"
                         projectLink="/"
                         projectImg="../src/assets/west-coast.png"
-                        :projectLang="['HTML', 'CSS', 'PHP', 'JS']"
+                        :projectLang="['HTML', 'CSS', 'PHP', 'JS', 'Wordpress']"
                     />
                 </div>
                 <div class="w-full lg:w-1/2 p-4">
@@ -107,7 +108,7 @@ import ProjectCard from "../src/components/ProjectCard.vue";
                         projectType="Custom Website"
                         projectLink="/"
                         projectImg="../src/assets/west-coast.png"
-                        :projectLang="['HTML', 'CSS', 'PHP', 'JS']"
+                        :projectLang="['HTML', 'CSS', 'PHP', 'JS', 'Wordpress']"
                     />
                 </div>
                 <div class="w-full lg:w-1/2 p-4">
@@ -124,32 +125,34 @@ import ProjectCard from "../src/components/ProjectCard.vue";
                         ]"
                     />
                 </div>
+
                 <div class="w-full lg:w-1/2 p-4">
                     <ProjectCard
-                        projectName="West Coast Tire Pros"
+                        projectName="Appointment Scheduler"
+                        projectType="Custom embeddable web app"
+                        projectLink="/"
+                        projectImg="../src/assets/scheduler.png"
+                        :projectLang="[
+                            'VUEJS',
+                            'Tailwind',
+                            'Pinia',
+                            'SourceMap JS',
+                        ]"
+                    />
+                </div>
+                <div class="w-full lg:w-1/2 p-4">
+                    <ProjectCard
+                        projectName="Vans Tire Pros"
                         projectType="Custom Website"
                         projectLink="/"
-                        projectImg="../src/assets/west-coast.png"
-                        :projectLang="['HTML', 'CSS', 'PHP', 'JS']"
-                    />
-                </div>
-                <div class="w-full lg:w-1/2 p-4">
-                    <ProjectCard
-                        projectName="Appointment Scheduler"
-                        projectType="Custom embeddable web app"
-                        projectLink="/"
-                        projectImg="../src/assets/scheduler.png"
-                        :projectLang="[
-                            'VUEJS',
-                            'Tailwind',
-                            'Pinia',
-                            'SourceMap JS',
-                        ]"
+                        projectImg="../src/assets/vanstire.png"
+                        :projectLang="['HTML', 'CSS', 'PHP', 'JS', 'Wordpress']"
                     />
                 </div>
             </div>
         </div>
     </div>
+    <Footer />
 </template>
 
 <style scoped lang="scss">
