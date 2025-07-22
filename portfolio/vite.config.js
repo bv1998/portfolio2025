@@ -8,6 +8,8 @@ export default defineConfig({
         preprocessorOptions: {
             scss: {
                 additionalData: `@import "@/styles.scss";`,
+                quietDeps: true,
+                silenceDeprecations: ["import"],
             },
         },
     },

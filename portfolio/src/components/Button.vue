@@ -17,9 +17,14 @@ const props = defineProps({
 </script>
 
 <template>
-    <div :class="`btn btn--${buttonStyle}`" :href="buttonLink">
+    <a
+        :class="`btn btn--${buttonStyle}`"
+        :href="buttonLink"
+        :target="buttonLink.startsWith('#') ? '' : '_blank'"
+        :rel="buttonLink.startsWith('#') ? '' : 'noopener noreferrer'"
+    >
         {{ buttonText }} <i class="fa-solid fa-arrow-right"></i>
-    </div>
+    </a>
 </template>
 
 <style scoped lang="scss">

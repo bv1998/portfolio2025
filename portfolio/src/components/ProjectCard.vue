@@ -24,7 +24,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div :class="`project-card mx-8`" :href="projectLink">
+    <div :class="`project-card mx-0 md:mx-8`" :href="projectLink">
         <p class="project-card__title">{{ projectName }}</p>
         <p class="project-card__type">{{ projectType }}</p>
         <img :src="projectImg" :alt="projectName" class="project-card__img" />
@@ -48,7 +48,7 @@ const props = defineProps({
     border: 8px solid $secondary;
     padding: 15px;
     &__title {
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 700;
         text-transform: uppercase;
         font-family: $heading;
@@ -69,6 +69,7 @@ const props = defineProps({
         width: 100%;
         height: 100%;
         object-fit: cover;
+        aspect-ratio: 747/401;
     }
 }
 .lang-items {

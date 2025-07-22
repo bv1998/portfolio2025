@@ -4,6 +4,8 @@ import Header from "../src/components/Header.vue";
 import Footer from "../src/components/Footer.vue";
 import Languages from "../src/components/Laguages.vue";
 import ProjectCard from "../src/components/ProjectCard.vue";
+import Projects from "../src/components/Projects.vue";
+import ContactForm from "../src/components/ContactForm.vue";
 </script>
 <template>
     <Header />
@@ -11,8 +13,8 @@ import ProjectCard from "../src/components/ProjectCard.vue";
         <div class="container">
             <h2>front end Developer In Raleigh, NC</h2>
             <h1>Bryan Vernon</h1>
-            <div class="flex flex-col items-center mt-40">
-                <div class="w-full lg:w-1/2 lg:mx-auto">
+            <div class="flex flex-col items-center mt-20 lg:mt-40">
+                <div class="w-full md:w-8/12 lg:w-1/2 lg:mx-auto">
                     <div class="img-placeholder"></div>
                 </div>
             </div>
@@ -26,9 +28,9 @@ import ProjectCard from "../src/components/ProjectCard.vue";
         </div>
     </div>
 
-    <div class="stripe--bio">
-        <div class="flex flex-row items-center container">
-            <div class="w-full lg:w-5/12">
+    <div class="stripe--bio lg:px-0 px-7">
+        <div class="flex lg:flex-row flex-col items-center container">
+            <div class="w-full md:w-8/12 lg:w-5/12 mx-auto lg:mb-0 mb-12">
                 <Languages />
             </div>
 
@@ -78,77 +80,14 @@ import ProjectCard from "../src/components/ProjectCard.vue";
         <div class="container">
             <h3>Check Out My Projects</h3>
 
-            <div class="flex flex-row flex-wrap items-center container">
-                <div class="w-full lg:w-1/2 p-4">
-                    <ProjectCard
-                        projectName="West Coast Tire Pros"
-                        projectType="Custom Website"
-                        projectLink="/"
-                        projectImg="../src/assets/west-coast.png"
-                        :projectLang="['HTML', 'CSS', 'PHP', 'JS', 'Wordpress']"
-                    />
-                </div>
-                <div class="w-full lg:w-1/2 p-4">
-                    <ProjectCard
-                        projectName="Appointment Scheduler"
-                        projectType="Custom embeddable web app"
-                        projectLink="/"
-                        projectImg="../src/assets/scheduler.png"
-                        :projectLang="[
-                            'VUEJS',
-                            'Tailwind',
-                            'Pinia',
-                            'SourceMap JS',
-                        ]"
-                    />
-                </div>
-                <div class="w-full lg:w-1/2 p-4">
-                    <ProjectCard
-                        projectName="West Coast Tire Pros"
-                        projectType="Custom Website"
-                        projectLink="/"
-                        projectImg="../src/assets/west-coast.png"
-                        :projectLang="['HTML', 'CSS', 'PHP', 'JS', 'Wordpress']"
-                    />
-                </div>
-                <div class="w-full lg:w-1/2 p-4">
-                    <ProjectCard
-                        projectName="Appointment Scheduler"
-                        projectType="Custom embeddable web app"
-                        projectLink="/"
-                        projectImg="../src/assets/scheduler.png"
-                        :projectLang="[
-                            'VUEJS',
-                            'Tailwind',
-                            'Pinia',
-                            'SourceMap JS',
-                        ]"
-                    />
-                </div>
-
-                <div class="w-full lg:w-1/2 p-4">
-                    <ProjectCard
-                        projectName="Appointment Scheduler"
-                        projectType="Custom embeddable web app"
-                        projectLink="/"
-                        projectImg="../src/assets/scheduler.png"
-                        :projectLang="[
-                            'VUEJS',
-                            'Tailwind',
-                            'Pinia',
-                            'SourceMap JS',
-                        ]"
-                    />
-                </div>
-                <div class="w-full lg:w-1/2 p-4">
-                    <ProjectCard
-                        projectName="Vans Tire Pros"
-                        projectType="Custom Website"
-                        projectLink="/"
-                        projectImg="../src/assets/vanstire.png"
-                        :projectLang="['HTML', 'CSS', 'PHP', 'JS', 'Wordpress']"
-                    />
-                </div>
+            <Projects />
+        </div>
+    </div>
+    <div class="stripe--contact">
+        <div class="container">
+            <div class="w-full md:w-8/12 mx-auto lg:mb-0 mb-12">
+                <h3>Get In Touch</h3>
+                <ContactForm />
             </div>
         </div>
     </div>
@@ -197,11 +136,17 @@ p {
     color: $dark;
 }
 .img-placeholder {
-    background: $secondary;
+    background-color: $secondary;
     border-radius: 65px;
-    max-height: 614px;
-    min-height: 500px;
+    max-height: 604px;
+    min-height: 490px;
     width: 100%;
+    background-image: url("../src/assets/bryan.jpg");
+    outline: 10px solid $secondary;
+    border: 10px solid $light;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: luminosity;
 }
 .bottom-items {
     justify-content: center;
